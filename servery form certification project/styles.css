@@ -1,0 +1,52 @@
+    body {
+        margin: 0;
+        height: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg) center/cover;
+        background-color: rgba(40, 118, 235, 0.5);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    #title {
+        text-align: center;
+        margin: 1em auto;
+        color: white;
+    }
+    
+    #description {
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        font-style: italic;
+    }
+    
+    form {
+        width: 60%;
+        background-color: rgba(10, 5, 51, 0.8);
+        margin: 2rem auto;
+        padding: 3em;
+    }
+    
+    label {
+        display: block;
+        color: white;
+        font-size: 22px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    
+    input,
+    select,
+    textarea {
+        width: 100%;
+        min-height: 2em;
+        margin-bottom: 2em;
+        font-size: 1em;
+        border-radius: 7px;
+        border: none;
+        padding-left: 2%;
+    }
+    
+    fieldset {
+        border: none;
+    }
