@@ -1,11 +1,29 @@
-    body {
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+     body {
         margin: 0;
         height: 100%;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg) center/cover;
+        
+        background: url("assets/car.jpg") center/cover;
+        /* background: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg) center/cover; */
         background-color: rgba(40, 118, 235, 0.5);
         background-position: center;
         background-repeat: no-repeat;
+    }
+
+    
+    .blue-screen{
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: url("assets/car.jpg") center/cover;
+
+        // background-color: rgba(40, 118, 235, 0.918);
+        
     }
     
     #title {
