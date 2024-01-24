@@ -7,8 +7,8 @@
         margin: 0;
         height: 100%;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        
-        background: url("assets/car.jpg") center/cover;
+        /*Note that car.jpg is a local asset and i used it only for testing purposes*/
+        background: url("assets/car.jpg") ;
         /* background: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg) center/cover; */
         background-color: rgba(40, 118, 235, 0.5);
         background-position: center;
