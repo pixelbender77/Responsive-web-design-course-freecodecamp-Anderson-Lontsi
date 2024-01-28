@@ -1,28 +1,27 @@
-    *{
+    * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
     }
-     body {
+    
+    body {
         margin: 0;
         height: 100%;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         /*Note that car.jpg is a local asset and i used it only for testing purposes*/
-        background: url("assets/car.jpg") ;
+        background: url("assets/car.jpg");
         /* background: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg) center/cover; */
         background-color: rgba(40, 118, 235, 0.5);
         background-position: center;
         background-repeat: no-repeat;
     }
     
-    .blue-screen{
+    .blue-screen {
         width: 100%;
         height: 100%;
         z-index: -1;
         background: url("assets/car.jpg") center/cover;
-
-        // background-color: rgba(40, 118, 235, 0.918);
-        
+        background-color: rgba(40, 118, 235, 0.918);
     }
     
     #title {
@@ -67,9 +66,3 @@
     fieldset {
         border: none;
     }
-
-    /*personal issues and burnout..*/
-    /*i'm resuming work on sunday 28th. Thanks to laura*/
-    /*Thanks to laura tomorrow i'm starting ! That will be a 11 hours pay day race of 1 month! 1 week
-    left to finish CSS, then 3 weeks to master javascript!. After that i'll attack the next js course
-    i bought. Perfect. Let's move*/
