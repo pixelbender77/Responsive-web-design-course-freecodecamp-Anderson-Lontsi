@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: #ECECEC;
+    border-radius: 10px;
+    margin: 40px 5px;
+    padding: 50px 5px;
+}
+
+#title {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#subtitle {
+    text-align: center;
+    font-family: Roboto;
+    margin: 20px 0;
+    color: #E95572;
+}
+
+#img-div {
+    background-color: white;
+    padding: 22px 70px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 10px;
+}
+
+#image {
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+#img-caption {
+    margin-top: 20px;
+    font-family: Roboto;
+}
+
+#tribute {
+    padding: 20px 30%;
+}
+
+#tribute-info {
+    margin-bottom: 50px;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+    font-family: 'Open Sans';
+}
+
+ul>li {
+    margin-bottom: 30px;
+    font-family: sans-serif;
+}
+
+.date {
+    font-weight: bold;
+}
+
+.author {
+    margin-top: 20px;
+}
+
+blockquote>p,
+blockquote>q {
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+blockquote>q {
+    font-weight: 100;
+    font-family: tahoma;
+    font-size: 0.85rem;
+}
+
+
+/*Screen reader Only*/
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+footer>p {
+    text-align: center;
+    font-weight: bold;
+    font-family: Roboto;
+    color: #283039;
+}
+
+#tribute-link {
+    color: #E95572;
+    text-decoration: none;
+    border-bottom: 3px solid #E95572;
+    padding-bottom: 2px;
+}
+
+#tribute-link:hover,
+#tribute-link:focus {
+    color: #FF9ABE;
+    border-bottom: 3px solid #FF9ABE;
+}
+
+
+/* 
+footer>p>a:any-link {
+    color: #E95572;
+    text-decoration: none;
+    border-bottom: 2px solid #E95572;
+}
+
+footer>p>a:hover,
+footer>p>a:focus {
+    color: #FF9ABE;
+    border-bottom: 2px solid #FF9ABE;
+} */
