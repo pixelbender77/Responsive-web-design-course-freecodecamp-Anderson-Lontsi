@@ -1,75 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>survey-form.freecodecamp.rocks</title>
-    <link rel="stylesheet" href="styles.css">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Certification Survey form"/>
+<title>Jazz music school student survey</title>
+<link rel="stylesheet" href="styles.css"/>
 </head>
-
 <body>
-    <div class="blue-screen"> </div>
-    <h1 id="title">X Website improvement Survey</h1>
-    <p id="description">Thank you for taking the time to help us improve the platform</p>
-    <form action="" id="survey-form">
-        <fieldset><label for="name">Name<input type="text" id="name" name="name" placeholder="Enter your name"/></label>
-            <label for="email">Email<input type="email" id="email" name="email" placeholder="Enter your email"/></label>
-            <label for="age">Age<input type="number" id="age" name="age" placeholder="Age" min="10" max="99" /></label>
-            <label for="role">Which option best describes your current role?
-                <select  id="role" name="role" placeholder="Select current role">
-                    <option value="">Select current role</option>
-                    <option value="1">Student</option>
-                    <option value="2">Full Time Job</option>
-                    <option value="3">Full Time Learner</option>
-                    <option value="4">Prefer not to say</option>
-                    <option value="5">Other</option>
-                </select></label>
-        </fieldset>
-        <fieldset>
-            <legend>Would you recommend freeCodeCamp to a friend?</legend>
-            <label for="definitely"><input id="definitely" type="radio" name="recommendation-type"/>Definitely</label>
-            <label for="maybe"><input id="maybe" type="radio" name="recommendation-type"/>Maybe</label>
-            <label for="notsure"><input id="notsure" type="radio" name="recommendation-type"/>Not sure</label>
+  
+  <h1 id="title">Jazz music School Survey</h1>
+  <p id="description">Provide the information requested so we know more about you</p>
+  <main>
+    <form id="survey-form" action="POST" action="freecodecamp.org">
+      <fieldset class="question">
+        <legend><label id="name-label" for="name">Name</label></legend>
+        <input id="name" type="text" placeholder="Enter your name" required/>
+      </fieldset>
+      <fieldset class="question">
+        <legend><label id="email-label" for="email">Email</label></legend>
+        <input id="email" type="email" placeholder="Enter your email" required/>
+      </fieldset>
+      <fieldset class="question">
+        <legend><label id="number-label" for="number">Age (optional)</label></legend>
+        <input id="number" type="number" min="2" max="100" placeholder="Enter your age" />
+      </fieldset>
+      
+      <fieldset class="question">
+        <legend><label for="dropdown">Which Jazz instrument do you like most?</label></legend>
+        <select id="dropdown" name="instrument" >
+          <option value="">Select an option</option>
+          <option value="piano">Piano</option>
+          <option value="guitar">Guitar</option>
+          <option value="upgright_bass">Upright bass</option>
+          <option value="saxophone">Saxophone</option>
+          <option value="drums">Drums</option>
+          <option value="trombone">Trombone</option>
+          </select>
 
-        </fieldset>
+      </fieldset>
 
-        <fieldset>
-            <legend>What is your favorite feature of freeCodeCamp?</legend>
-            <select id="feature" name="feature" placeholder="Select an option">
-                <option value="">Select an option</option>
-                <option value="1">Challenges</option>
-                <option value="2">Projects</option>
-                <option value="3">Community</option>
-                <option value="4">Open Source</option>
-            </select>
+<fieldset class="vertical-align">
+  <legend><label>Why do you want to learn Jazz music?</label></legend>
+  <label><input type="radio" name="why" value="fun"/>For fun</label>
+  <label><input type="radio" name="why" value="love"/>For the love of it</label>
+  <label><input type="radio" name="why" value="money"/>To make money</label>
+</fieldset>
 
-        </fieldset>
-        <fieldset>
-            <label> Which course will you add to freeCodeCamp if you were given the power (Check all that apply)</label>
-            <label for="dancing"><input id="dancing" type="checkbox" name="dancing" value="dancing">Dance Course</label>
-            <label for="singing"><input id="singing" type="checkbox" name="singing" value="singing">Singing Course</label>
-            <label for="Running"><input id="Running" type="checkbox" name="Running" value="Running">Sprint courses</label>
-            <label for="Religion"><input id="Religion" type="checkbox" name="Religion" value="Religion">Religion Courses</label>
-            <label for="FBI"><input id="FBI" type="checkbox" name="FBI" value="FBI">FBI agent courses</label>
-            <label for="Piano"><input id="Piano" type="checkbox" name="Piano" value="Piano">Piano lessons</label>
-            <label for="guitar"><input id="guitar" type="checkbox" name="guitar" value="guitar">Guitar Lessons</label>
-            <label for="saxophone"><input id="saxophone" type="checkbox" name="saxophone" value="saxophone">Saxophone lessons</label>
-            <label for="trombone"><input id="trombone" type="checkbox" name="trombone" value="trombone">Trombone lessons</label>
-            <label for="upright-bass"><input id="upright-bass" type="checkbox" name="upright-bass" value="upright-bass">Upright bass Full Course</label>
-            <label for="jazz"><input id="jazz" type="checkbox" name="jazz" value="jazz">Jazz Music Theory</label>
+      <fieldset class="vertical-align">
+        <legend><label >Which of the following jazz standards do you know?</label></legend>
 
-        </fieldset>
+        <label for="1"><input id="1" type="checkbox" value="1" name="standards">A Night in Tunisia</label>
 
-        <fieldset>
-            <textarea name="comments" id="comments" cols="30" rows="10" name="comments" placeholder="Enter your comment here">
-            </textarea>
-        </fieldset>
-        <input type="submit" value="Submit">
+        <label for="2"><input id="2" type="checkbox" value="2" name="standards">Autumn Leaves</label>
+      
+        <label for="3"><input id="3" type="checkbox" value="3" name="standards">Take the "A" Train</label>
+      
+        <label for="4"><input id="4" type="checkbox" value="4" name="standards">Summertime</label>
+      
+        <label for="5"><input id="5" type="checkbox" value="5" name="standards">All the Things You Are</label>
+      
+        <label for="6"><input id="6" type="checkbox" value="6" name="standards">Blue Monk</label>
+      
+        <label for="7"><input id="7" type="checkbox" value="7" name="standards">Fly Me to the Moon</label>
+      
+        <label for="8"><input id="8" type="checkbox" value="8" name="standards">So What</label>
+      
+        <label for="9"><input id="9" type="checkbox" value="9" name="standards">Stella by Starlight</label>
+      
+        <label for="10"><input id="10" type="checkbox" value="10" name="standards">My Favorite Things</label>
+      </fieldset>
+<fieldset>
+<legend><label for="comment">Any comments or suggestions?</label></legend>
+<textarea id="comment" cols="20" rows="5" name="comment"></textarea>
+</fieldset>
+
+<button id="submit" type="submit">Submit</button>
+      
 
     </form>
+  </main>
 
 </body>
+<footer> no copyright by Anderson Lontsi (2024)
+  </footer>
 
 </html>
