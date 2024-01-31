@@ -1,15 +1,14 @@
-html {
-    scroll-behavior: smooth;
-}
-
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     padding: 0;
     display: flex;
+    gap: 0;
+    /* background-color:#71109E; */
 }
 
 
@@ -21,8 +20,9 @@ body {
     color: #5B5B5B;
     margin: 40px 60px;
     width: 70%;
+    height: 100vh;
+    background-color: #7E909E;
     overflow-y: auto;
-    /* Enable vertical scrolling for the sidebar */
 }
 
 header {
@@ -88,7 +88,7 @@ li {
     color: #FFF;
     /* background-color: #55b; */
     width: 100%;
-    margin: 15px 0;
+    /* margin: 15px 0; */
     border-top: 0.5px solid #D9D9D9;
     padding: 20px;
 }
