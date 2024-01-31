@@ -1,0 +1,94 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+/* Main section */
+
+#main-doc {
+    /* flex: 1; */
+    font-family: sans-serif;
+    color: #5B5B5B;
+    margin: 40px 60px;
+    width: 70%;
+    overflow-y: auto;
+    /* Enable vertical scrolling for the sidebar */
+}
+
+header {
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: 450;
+    margin-left: -20px;
+    margin-top: 20px;
+}
+
+.code-pad {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    background-color: #CFCFCF;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+
+/*Nav bar*/
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    /* 25% of the screen width*/
+    height: 100vh;
+    /*100% of the screen height*/
+    border-right: 3px solid #949494;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* padding-left:0.5rem; */
+    background-color: #001;
+}
+
+#navbar header {
+    margin-bottom: 5px;
+    font-family: Roboto;
+    font-size: 1.4rem;
+    color: #BDD8EE;
+}
+
+#links-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* height:100%; */
+    color: #CECECE;
+    overflow-y: auto;
+    /* Enable vertical scrolling for the sidebar */
+}
+
+.nav-link {
+    display: block;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #FFF;
+    /* background-color: #55b; */
+    width: 100%;
+    margin: 15px 0;
+    border-top: 0.5px solid #D9D9D9;
+    padding: 20px;
+}
