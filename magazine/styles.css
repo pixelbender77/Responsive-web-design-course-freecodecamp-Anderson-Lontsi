@@ -62,6 +62,7 @@ hr {
     letter-spacing: 0.6px;
     column-width: 25rem;
     text-align: justify;
+    /* justify here is to make all the lines have the same length. That's typical magazine kind of stuff*/
 }
 
 .hero {
