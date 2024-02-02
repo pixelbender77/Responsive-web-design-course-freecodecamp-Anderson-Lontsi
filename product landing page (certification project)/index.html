@@ -1,56 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Anderson's Jazz music instruments shop">
-    <title>Anderson(R) Jazz Shop</title>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="styles.css" />
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Anderson's Jazz music instruments shop">
+        <title>Anderson(R) Jazz Shop</title>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
 
+            <!--THE BODY-->
+    
+        <body>
+            <!--HEADER-->
 
-<header id="header">
-    <img src="" id="header-img" alt="website logo">
-    <nav id="nav-bar">
-        <ul>
-            <li class="nav-link"><a href="#">Our Strengths</a></li>
-            <li class="nav-link"><a href="#">Live Shows</a></li>
-            <li class="nav-link"><a href="#">Pricing</a></li>
-        </ul>
-    </nav>
-</header>
+            <header id="header">
+                    <img src="./logo.png" id="header-img" alt="website logo">
+                    <nav id="nav-bar">
+                        <ul>
+                            <li class="nav-link"><a href="#Features">Features</a></li>
+                            <li class="nav-link"><a href="#Live_Shows">Live Shows</a></li>
+                            <li class="nav-link"><a href="#Pricing">Pricing</a></li>
+                        </ul>
+                    </nav>
+            </header>
 
-<body>
-    <h1 class="title">Peace, Love and jazz</h1>
+            <!--MAIN-->
 
-    <form id="form" method="POST" action="https://www.freecodecamp.com/email-submit">
-        <input type="email" name="email" id="email" placeholder="Enter your email" required/>
-        <input type="submit" value="Jazz it up" id="submit" />
-    </form>
+            <main>
+                <!-- HERO -->
+                <div id="hero">
+                    <h1 id="hero-title">Peace, Love and jazz</h1>
 
-
-    <main>
-        <!-- #Strengths-->
-        <section id="Our_Strengths">
-            <!-- Gold material-->
-            <div class="icon-text-element">
-                <i class="fa fa-diamond"></i>
-                <span class="fa fa-camera-retro"></span>
-                <div class="icon-text-container">
-                    <h2 class="icon-text-title">Gold Materials</h2>
-                    <p class="icon-text"> All our instruments are made of Gold. This makes them unique, long lasting.</p>
+                    <form id="form" method="POST" action="https://www.freecodecamp.com/email-submit">
+                        <input type="email" name="email" id="email" placeholder="Enter your email" required/>
+                        <input type="submit" value="Signup" id="submit" />
+                    </form>
                 </div>
+                <!-- FEATURES -->
 
-                <!-- Fast shipping-->
+                <section id="Features">
+                <!-- Gold material-->
 
-                <div class="icon-text-element">
-                    <i class="fa fa-diamond"></i>
-                    <span class="fa fa-camera-retro"></span>
-                    <div class="icon-text-container">
-                        <h2 class="icon-text-title">Fast Shipping</h2>
-                        <p class="icon-text">we use the latest planes for our deliveries. Your instrument arrives as nit as you see in the catalogue</p>
+                    <div class="icon-text-element">
+                        <i class="fa fa-diamond"></i>
+                        <span class="fa fa-camera-retro"></span>
+                        <div class="icon-text-container">
+                            <h2 class="icon-text-title">Gold Materials</h2>
+                            <p class="icon-text"> All our instruments are made of Gold. This makes them unique, long lasting.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fast shipping-->
+
+                    <div class="icon-text-element">
+                        <i class="fa fa-diamond"></i>
+                        <span class="fa fa-camera-retro"></span>
+                        <div class="icon-text-container">
+                            <h2 class="icon-text-title">Fast Shipping</h2>
+                            <p class="icon-text">we use the latest planes for our deliveries. Your instrument arrives as nit as you see in the catalogue</p>
+                        </div>
                     </div>
 
                     <!-- Quality Assurance-->
@@ -61,51 +71,77 @@
                             <h2 class="icon-text-title">Quality Assurance</h2>
                             <p class="icon-text">We make sure the instrument has the correct pitch and sounds as good as the day it was produced</p>
                         </div>
+                    </div>
 
-        </section>
+
+                </section>
 
 
-        <!-- #Embeded video -->
-        <section id="Live_Shows">
-            <iframe id="video" width="427" height="240" src="https://www.youtube.com/embed/3cEQfNZ_F1w" frameborder="0" allow="accelerometer; encrypted-media;            picture-in-picture; gyroscope;" allowfullscreen>
-  </iframe>
-            </iframe>
-        </section>
+                <!-- #Embeded video -->
+                <section id="Live_Shows">
+                    <iframe id="video" width="427" height="240" src="https://www.youtube.com/embed/3cEQfNZ_F1w" frameborder="0" allow="accelerometer; encrypted-media;            picture-in-picture; gyroscope;" allowfullscreen loading="lazy">
+                                    </iframe>
+                </section>
 
-        <!-- #Pricing Section-->
-        <section id="Pricing">
+                <!-- #Pricing Section-->
+                <section id="Pricing">
+                    <div class="price-card">
+                        <p class="price-card--title">Upright Bass</p>
+                        <p class="price-card--price">$550</p>
+                        <ul class="price-card--description">
+                            <li>Made of gold</li>
+                            <li>Perfect for billionaires</li>
+                            <li>Good for jazz bands</li>
+                            <li>Best quality</li>
+                        </ul>
+                        <button class="price-card--btn">Add to cart</button>
 
-            <div class="price-card">
-                <p class="price-card--title">Upright Bass</p>
-                <p class="price-card--price">$550</p>
-                <p class="price-card--description">Made of gold</p>
-                <p class="price-card--description">Perfect for billionaires</p>
-                <p class="price-card--description">Good for jazz bands</p>
-                <p class="price-card--description">Best quality</p>
-            </div>
+                    </div>
 
-            <div class="price-card">
-                <p class="price-card--title">Nord Stage Piano</p>
-                <p class="price-card--price">$3550</p>
-                <p class="price-card--description">Perfect sound</p>
-                <p class="price-card--description">+35000 options</p>
-                <p class="price-card--description">signed by Emmet Cohen</p>
-                <p class="price-card--description">Good for concerts</p>
-            </div>
+                    <div class="price-card">
+                        <p class="price-card--title">Nord Stage Piano</p>
+                        <p class="price-card--price">$3550</p>
+                        
+                        <ul class="price-card--description">
+                            <li>Perfect sound</li>
+                            <li>Signed by Emmet Cohen</li>
+                            <li>+35000 options</li>
+                            <li>Good for concerts</li>
+                        </ul>
+                        <button class="price-card--btn">Add to cart</button>
 
-            <div class="price-card">
-                <p class="price-card--title">Alto Sax</p>
-                <p class="price-card--price">$550</p>
-                <p class="price-card--description">lorem ipsum</p>
-                <p class="price-card--description">lorem ipsum</p>
-                <p class="price-card--description">lorem ipsum</p>
-                <p class="price-card--description">lorem ipsum</p>
-            </div>
+                    </div>
 
-        </section>
+                    <div class="price-card">
+                        <p class="price-card--title">Alto Sax</p>
+                        <p class="price-card--price">$550</p>
+                        <ul class="price-card--description">
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                            <li>lorem ipsum</li>
+                        </ul>
+                        <button class="price-card--btn">Add to cart</button>
+                    </div>
 
-    </main>
-</body>
-<footer></footer>
+                </section>
+
+            </main>
+            
+            <!--FOOTER-->
+            <footer>
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <p class="copyright">&copy; 2024, Anderson Jazz instruments
+            </p>
+        </footer>
+        </body>
+        <!--FOOTER -->
+        
+        
+   
 
 </html>
