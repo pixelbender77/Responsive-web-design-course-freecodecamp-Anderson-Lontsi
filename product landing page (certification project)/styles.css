@@ -45,8 +45,8 @@
 }
 
 
-.nav-link a,
-.nav-link a:active {
+.nav-link ,
+.nav-link:active {
     text-decoration: none;
     color: papayawhip;
     font-family: Roboto;
@@ -55,7 +55,7 @@
 
 }
 
-.nav-link a:hover {
+.nav-link:hover {
     text-decoration: none;
     background-color: white;
     color: var(--main-active);
