@@ -2,7 +2,11 @@
     --main-gradient: linear-gradient(to left, #382F71, #2E66A5);
     --botton-border: 5px;
     --input-border: 10px;
-    --main-background: #D8DBDE;
+    --main-background: #EEEFF0;
+    --main-secondary: #C6D5E6;
+    --main-active: #59ACD8;
+    --main-text: black;
+    --secondary-text: #535352;
 }
 
 *,
@@ -11,6 +15,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 #header {
@@ -19,7 +24,8 @@
     align-items: center;
     width: 100vw;
     padding: 15px 100px 15px 100px;
-    background-image: var(--main-gradient);
+    /*background-image: var(--main-gradient);*/
+    background-color: var(--main-active);
     top: 0;
     position: fixed;
     z-index: 999;
@@ -38,27 +44,32 @@
     gap: 40px;
 }
 
+
 .nav-link a,
 .nav-link a:active {
     text-decoration: none;
     color: papayawhip;
     font-family: Roboto;
     animation: color 10s ease-in-out;
+    padding: 4px;
+
 }
 
 .nav-link a:hover {
     text-decoration: none;
-    color: #1FBEB8;
+    background-color: white;
+    color: var(--main-active);
     font-family: Roboto;
 }
 
 
-/*body*/
+/*-------------------------------------body-------------------------------*/
 
 body {
     display: grid;
-    grid-template-columns: minmax(10rem, 1fr) minmax(min-content, 80rem) minmax(10rem, 1fr);
+    grid-template-columns: minmax(2rem, 1fr) minmax(20rem, 80rem) minmax(2rem, 1fr);
     background-color: var(--main-background);
+    font-family: sans-serif;
 }
 
 /*Page*/
@@ -67,6 +78,7 @@ main {
     grid-column: 2;
     background-color: var(--main-background);
     padding: 50px 10px;
+
 
 }
 
@@ -77,92 +89,145 @@ main {
     align-items: center;
 }
 #hero{
+    margin-top: 50px;
     margin-bottom: 50px;
 }
-#hero-title{
+#hero-title{ 
     margin-bottom: 15px;
-    font-family: serif;
+    font-family: 'Nunito';
+    color: var(--main-text);
 }
 #email{
-    width: 400px;
+    width: 300px;
+    min-width: 100px;
     height: 35px;
     border: none;
-    /*border-radius: 5px;*/
+    border-radius: 5px;
     padding: 5px 10px;
     margin-bottom: 10px;
 }
+
 #submit{
     width: 100px;
     height: 30px;
-    background-image: var(--main-gradient);
-    color: white;
-    border-radius: var(--botton-border);
+    background-color:var(--main-secondary);
+    /*border-radius: var(--botton-border);*/
     border: none;
+    
 }
 #submit:hover{
-    background-image: linear-gradient( to left,#2E66A5, #fffadb);
+    background-color: var(--main-active);
     cursor: pointer;
 }
 
-/* --- Strengths --- */
+
+/* ---------------------- Strengths ---------------------------- */
 #Features{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 50px;
     margin : 50px auto;
     font-family: Roboto, serif;
     font-weight: light;
+    width: 50%;
+    
+}
+.icon-text-element{
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+.icon-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 .icon-text-title{
     font-family: Roboto, serif;
     font-weight: bold;
+    color: var(--main-text);
+}
+.icon-text{
+    color: #535352;
+}
+
+i{  /*Icons*/
+    font-size: 2.5rem;
+    color: var(--main-active);
 }
 
 
-/*Embeded video*/
+
+/*----------------------------------Embeded video-------------------------*/
 #Live_Shows{
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
 
-/*Pricing*/
+#video {
+    border-radius: 10px;
+}
+
+/*-------------------------------------Pricing---------------------------------*/
 #Pricing{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    gap: 30px;
     font-size: 1.5rem;
+}
+@media only screen and (max-width:1260px){
+    #Pricing{
+        flex-direction: column;
+    }
 }
 
 .price-card{
     min-width: 300px;
+    max-width: 350px;
     min-height: 320px;
-    background-color: aliceblue;
+    background-color: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    --card-radius: 10px;
+    border-radius: var(--card-radius);
+    border: 1px solid #B9B9B9;
+
 }
+/*
+.price-card:hover{
+    border: 2px solid var(--main-active);
+}*/
 
 .price-card--title{
     font-family: Roboto;
-    background-color: aquamarine;
+    background-color: var(--main-secondary);
+    border-top-right-radius: var(--card-radius);
+    border-top-left-radius: var(--card-radius);
     width: 100%;
     display: inline-block;
     /*padding: 10px 10px;*/
     padding: 10px;
     display: flex;
     justify-content: center;
+    color: var(--main-text);
 
 }
 .price-card--description{
     list-style: none;
     font-size: 1rem;
+    font-family: Roboto, serif;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    color: var(--secondary-text);
 }
 
 .price-card--price{
@@ -170,15 +235,20 @@ main {
     font-weight: bolder;
 }
 .price-card--btn{
-    background-color: #382F71;
+    /*background-color: var(--main-active);*/
+    border: 1px solid var(--main-active);
+    font-family: sans-serif;
     width: 50%;
-    border: none;
     padding: 10px;
     margin: 15px;
+    border-radius: var(--botton-border);
+    color: var(--seconday-text);
 }
 
 .price-card--btn:hover{
-    background-image: var(--main-gradient);
+    background-color: var(--main-active);
+    color: white;
+    border: none;
 }
 
 
@@ -189,22 +259,83 @@ footer {
     flex-direction: column;
     align-items: flex-end;
     grid-column: 2/3;
-    background-color: #Ab5F71;
+    background-color: var(--main-active);
+    padding: 20px;
+    font-family: sans-serif;
+    gap: 5px;
 
 }
 
 footer ul {
     display: flex;
+    gap: 10px;
     list-style: none;
 }
-
-#hero {
-    margin-top: 40px;
+footer ul li a, footer ul li a:active{
+    color: #4BA3FF;
+    font-weight: bold;
+}
+.copyright{
+    font-size: 0.8rem;
+    color: var(--secondary-text);
 }
 
-#video {
-    border-radius: 10px;
+
+
+/*Media Queries*/
+
+/*header*/
+@media only screen and (max-width:815px) {
+    #header {
+    padding: 15px 60px;
+    }
+    #header-img{
+        width: 100px;
+    }
+    #nav-bar ul {
+        flex-direction: column;
+        gap: 0;
+
+    }
 }
+@media only screen and (max-width:580px){ 
+    #header{
+        flex-direction: column;
+    }
+    #hero{
+        margin-top: 80px;
+    }
+}
+
+
+/*Body*/
+
+/*features*/
+@media only screen and (max-width:800px){
+    #Features{
+        width: 90%;
+    }
+    }
+
+@media only screen and (max-width: 700px) {
+    main, footer{ 
+        grid-column: 1/-1;}
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark mode colors */
+        --main-background: #1E1E1E;
+        --main-secondary: #3A4859;
+        --main-active: #58646B;
+        --main-text: #E3E5E6;
+        --secondary-text:#C2C4C5;
+      }
+}
+
+
+
+
 
 /*main, footer{
 display: flex;
