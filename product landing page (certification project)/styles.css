@@ -272,7 +272,7 @@ footer ul {
     list-style: none;
 }
 footer ul li a, footer ul li a:active{
-    color: #4BA3FF;
+    color: var(--main-text);
     font-weight: bold;
 }
 .copyright{
