@@ -1,0 +1,50 @@
+                * {
+                    padding: 0;
+                    margin: 0;
+                }
+                
+                .scroll-watcher {
+                    height: 10px;
+                    position: fixed;
+                    top: 0;
+                    z-index: 1000;
+                    background-color: black;
+                    width: 100%;
+                    scale: 0 1;
+                    transform-origin: left;
+                    animation: scroll-watcher linear;
+                    animation-timeline: scroll(y);
+                }
+                
+                @keyframes scroll-watcher {
+                    to {
+                        scale: 1 1;
+                    }
+                }
+                /* Image animator*/
+                
+                @media (prefers-reduced-motion:no-preference) {
+                    .animate-image {
+                        scale: .8;
+                        opacity: 0;
+                        animation: fade-in linear forwards;
+                        /*animation-timeline: view(250px, 100px); /*view(top-upset, bottom-upset)* animation will start when you're 250px away from top of the image or 100px away  from the bottom /
+            /*view(top and bottom upsets)*/
+                        animation-timeline: view();
+                        /* animation-range-end: contain; */
+                        /*animation starts when the screen bottom touches the bottom of the element. (when the element is CONTAINED in the screen)*/
+                        /* animation-range-end: contain; */
+                        /*animation ends when the screen bottom touches the bottom of the element. (when the element is CONTAINED in the screen)*/
+                        /*200px away from the top*/
+                        animation-range: entry;
+                        /*animation starts when you enter the element, there's also the exit keyword*/
+                        /*you can basically add say 100px pixels to the entry value to delay the animation to 100px ie animation-range: entry 100px;*/
+                        /*with entry 100px it will be entry at entry + 100px . you can also add negative values.*/
+                    }
+                    @keyframes fade-in {
+                        to {
+                            scale: 1;
+                            opacity: 1;
+                        }
+                    }
+                }
