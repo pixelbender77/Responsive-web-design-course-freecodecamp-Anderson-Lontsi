@@ -1,6 +1,9 @@
 /*Importing fonts*/
 
 @import url(https://db.onlinewebfonts.com/c/253dbc5232cdeb9bb63b3fa736d7fdbb?family=Sectar);
+@import url(https://db.onlinewebfonts.com/c/7615af7a9f681395bf515be718f1bf9c?family=SofiaPro);
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -22,6 +25,7 @@
  body{
     background-color: var(--main-background);
     font-family: 'Roboto';
+    overflow-x: hidden;
  }
 /*header*/
 /*navbar*/
@@ -32,44 +36,45 @@ header{
     align-items: center;
     width: 100%;
     min-height: 80px;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(10px);
     
 }
 #navbar{
-    min-width: 20px;
-    max-width: 1000px;
+    // min-width: 90px;
+    max-width: 100vw;
     font-family: 'Poppins',serif;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     justify-content: space-between;
-    gap: 20px;
-    // gap: 2.1rem;
+    // gap: 20px;
+    gap: 2.1rem;
     text-transform: uppercase;
     letter-spacing: 5px;
-    background-color: #1AABE2;
+    transition: all .3s ease-in-out;
+
+    // background-color: #1AABE2;
 }
 #navbar>li>a:any-link{
     color: #FFF;
     text-decoration: none;
     transition: all .3s ease-in-out;
 }
-#navbar>ul>li>a:hover{
+#navbar>li>a:hover , #navbar>li>a:focus{
     color: var(--main-accent);
 }
 
 
-/*Welcome section*/
+/* -------- Welcome section ---------*/
 
 #welcome-section{
     /*size and image*/
-    width: 100%;
+    max-width: 100vw;
     height: 100vh;
     background-position: center;
     background: radial-gradient( circle at 50% 50%,rgba(0, 0, 0, 0.5)0%,rgba(0, 0, 0,0.9) 100%);
-    
     // background: radial-gradient( rgba(255, 255, 255, 0.5), rgba(0, 0, 0));
     object-fit: cover;
     background-size: cover;
@@ -80,8 +85,70 @@ header{
     align-items: center;
 
     /*hero background*/
-    
 }
+/*welcome section internal container*/
+#welcome-section__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow:row-reverse wrap;
+    gap: 0rem;
+    align-items: center;
+    width: 60%;
+    min-width: 200px; /*After 594 flex should wrap and form a column*/
+    height: 60%;
+    // background-color: aquamarine;
+}
+@media only screen and (max-width: 970px) {
+    #welcome-section__container{
+        justify-content: center ;/*This is horizontally align the items when wrapping occures. Justify content is space-between in the row desktop version we had to use a media query*/
+    }    
+}
+#welcome-section__left{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1.5rem;
+    font-family: 'SofiaPro';
+    color: white;
+    font-weight: 100;
+}
+
+/*right side image container*/
+#picture-container{
+    width: 354px;
+    height: 344px;
+    border: 7px solid var(--main-secondary);
+    padding: 10px;
+}
+/*left side image*/
+#welcome-section__picture{
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ object-position: 5% 35%;
+}
+
+#skill{
+    font-family: 'Sectar';
+    color: var(--main-accent);
+    font-size: 1.5rem;
+}
+#hero__button{
+    max-width: 150px;
+    min-height:50px ;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+#hero__button:hover{
+    background-color: #1A96C5;
+    border: none;
+}
+
+/*background image*/
 #welcome-section__bg-img{
     position: absolute;
     width: 100vw;
@@ -91,6 +158,112 @@ header{
 }
 
 
+/*--Divider--*/
+.divider{
+    min-width: 100vw;
+    height: 40px;
+    background-color: var(--main-secondary);
+}
+
+
+/*----------ABOUT ME -----------*/
+
+#about{
+    display: flex;
+    align-items: center; justify-content: center;
+}
+#about-container{
+    max-width: 1100px;
+    min-width: 200px;
+    height: 500px;
+    // background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    margin: 80px;
+    // gap: 10rem;
+}
+@media only screen and (max-width:826px) {
+    #about-container{
+        flex-direction: column;
+        align-items: flex-start;   
+        gap: 2rem;
+    }
+
+    
+}
+.left{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:space-evenly;
+    gap: 2.5rem;
+    height: 80%;
+    // border-left: 8px solid var(--main-secondary);
+    padding-left: 30px;
+    position: relative;
+    // background-color: red;
+}
+/*Gray line on left side*/
+.left::before{
+    position: absolute;
+    height: 300px;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 8px;
+    background-color: var(--main-secondary);
+}
+.title{
+    font-size: 2rem;
+    color: black;
+    position: relative;
+    font-family: 'Roboto',serif;
+    font-weight: bold;
+}
+.title::before{
+    position: absolute;
+    content: '';
+    left: 25px;
+    bottom: -10px;
+    width: 70px;
+    height: 6px;
+    background-color: black;
+}
+
+/*content*/
+.content{
+    color: var(--main-secondary);
+    font-style: normal;
+}
+
+/*button*/
+
+#secondary-btn{
+    max-width: 150px;
+    min-height:50px ;
+    font-size: 1rem;
+    background-color: var(--main-secondary);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+#secondary-btn:hover{
+    background-color: black;
+    border: none;
+}
+
+/*about image*/
+#about-img{
+    width: 354px;
+    height: 344px;
+    object-fit: cover;
+    object-position: 5% 35%;
+}
+
+
+
+/*----- PROJECTS ----*/
 // #img__container{
 
 //     min-width: 200px;
