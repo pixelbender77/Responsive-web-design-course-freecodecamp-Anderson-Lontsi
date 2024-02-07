@@ -7,6 +7,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 
@@ -131,9 +132,9 @@ header{
     flex-flow: column wrap;
     gap: 1.5rem;
     font-family: 'Poppins',serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: light;
-    letter-spacing: 4px;
+    /*letter-spacing: 4px;*/
     color: white;
 
 
@@ -294,6 +295,14 @@ header{
 #projects .title{
     color: white;
     align-self: center;
+    opacity: 0;
+    animation: fade-in;
+    animation-timeline: view();
+    animation-range: entry ;
+    
+}
+@keyframes fade-in{
+    to { opacity: 1;}
 }
 #projects .title::before{
     background-color: white;
@@ -316,13 +325,13 @@ header{
 
 .project__tiles{
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(300px,1fr)); /*minmax here defines the minimum and maximum width of a column but also automatically that of the grid items (tiles in this case) */
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit , minmax(350px,1fr)); /*minmax here defines the minimum and maximum width of a column but also automatically that of the grid items (tiles in this case) */
+    gap: 30px;
 }
 
 
 /* Project tile*/
-.project__tile{
+.project-tile{
     color: white;
     min-height: 20rem;
     background-color: #76797A;
@@ -342,7 +351,7 @@ header{
 }
  
 /*blue screen (initially transparent but will be visible on hover )*/
-.project__tile::before{
+.project-tile::before{
     content: "";
     position: absolute;
     top:0;
@@ -358,7 +367,7 @@ header{
 }
 
 /*Showing the blue screen on hover*/
-.project__tile:hover::before{
+.project-tile:hover::before{
     opacity: 0.8;
 }
 /*Note that for that hover i went for this approach because transition was not applied when i just changed the background property of the tile in the hover effect. (transitions don't apply to the background property when there is an image implicated i guess*/
