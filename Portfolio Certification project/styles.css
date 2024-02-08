@@ -21,6 +21,7 @@
     --secondary-font: 'Poppins';
     --Tertiary-font: 'Sofia Pro';
     --exclusive-font: 'Sectar';
+    --splash-sreen-duration: 2s;
 }
 /*Utilities*/
 .sr-only {
@@ -48,6 +49,7 @@
     background-color: var(--main-background);
     font-family: 'Roboto';
     overflow-x: hidden;
+    animation: avoid-scroll  var(--splash-sreen-duration); /*there will be no scroll bar during the splash screen*/
  }
 /*Scroll watch*/
 #scroll-watcher{
@@ -608,4 +610,64 @@ footer{
     color: white;
     font-size: .8rem;
     background-color: black;
+}
+
+
+/*Splash screen*/
+
+#splash {
+    position: absolute;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #024766;
+    width: 100vw;
+    height: 100vh;
+    animation: fade-out var(--splash-sreen-duration) ease-in forwards;
+
+}
+#my_logo{
+    opacity: 0;
+    filter: blur(5px);
+    width: 15vw;
+    min-width: 200px;
+    height: 15vw;
+    min-height: 200px;
+    animation: blur-in var(--splash-sreen-duration) ease-in-out 0s 1 forwards;
+}
+
+@keyframes blur-in {
+    15% {
+        filter: blur(0);
+        opacity: 1;
+    }
+    80% {
+        filter: blur(0);
+        opacity: 1;
+    }
+    100% {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    50%{
+        opacity: 1;
+    }
+    99%{
+        opacity: 0;  
+    }
+    100%{
+        display: none; /*We want to remove the splash screen from the screen after it disapears*/
+    }
+    /*if we don't do so it will stay on top of the welcome-section area and tho it will be invisible , we won't be able to interact with any element in the welcome section or header*/
+}
+
+/*avoiding scroll during splash screen animation*/
+@keyframes avoid-scroll {
+    0%{overflow-y: hidden;}
+    99%{overflow-y: hidden;}
+    100%{overflow-y:visible;}
 }
